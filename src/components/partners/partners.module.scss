@@ -1,0 +1,31 @@
+@use "../../sass/abstracts/" as *;
+
+
+// themes
+.container[datatype="dark"]{
+   fill: $partners-logo-fill-dark;
+}
+.container[datatype="light"]{
+   fill: $partners-logo-fill-light;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: $partners-grid-gap-mobile;
+
+    @include mq(medium){
+        grid-template-rows: 1fr 1fr ;
+        gap: $partners-grid-gap-tablet;
+    }
+
+    @include mq(large){
+        order: $partners-image-order;
+    }
+
+    svg{
+        justify-self: center;
+    }
+}

@@ -1,0 +1,74 @@
+@use "../abstracts" as *;
+.button {
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  text-transform: $button-text-transform;
+  font-weight: $button-font-weight;
+  padding: $button-padding;
+  border: $button-border;
+  border-radius: $button-border-radius;
+  letter-spacing: $button-letter-spacing;
+  transition: 275ms ease;
+
+  &[datatype="primary"] {
+    background: $button-primary-background;
+    color: $button-primary-color;
+
+    &:is(:hover, :focus) {
+      background-color: $button-primary-background-hover;
+      color: $button-primary-color-hover;
+    }
+  }
+  //disabled state
+  &.disabled[datatype="primary"] {
+    opacity: 0.6;
+    &:is(:hover, :focus) {
+      background-color: $button-primary-background;
+      color: $button-primary-color-hover;
+    }
+  }
+  // dark
+  &[datatype="secondary-dark"] {
+    background: $button-secondary-dark-background;
+    color: $button-secondary-dark-color;
+    border: $button-secondary-dark-border;
+
+    &:is(:hover, :focus) {
+      background: $button-secondary-dark-background-hover;
+      color: $button-secondary-dark-color-hover;
+    }
+  }
+  //disabled state
+  &.disabled[datatype="secondary-dark"] {
+    opacity: 0.6;
+
+    &:is(:hover, :focus) {
+      background: $button-secondary-dark-background;
+      color: $button-secondary-dark-color;
+    }
+  }
+  // light
+  &[datatype="secondary-light"] {
+    background: $button-secondary-light-background;
+    color: $button-secondary-light-color;
+    border: $button-secondary-light-border;
+
+    &:is(:hover, :focus) {
+      background: $button-secondary-light-background-hover;
+      color: $button-secondary-light-color-hover;
+    }
+  }
+  //disabled state
+  &.disabled[datatype="secondary-light"] {
+    opacity: 0.6;
+    &:is(:hover, :focus) {
+      background: $button-secondary-light-background;
+      color: $button-secondary-light-color;
+    }
+  }
+}

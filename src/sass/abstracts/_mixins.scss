@@ -1,0 +1,72 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+@use "breakpoints" as *;
+@use "tokens" as *;
+@use "colors" as *;
+
+@mixin mq($size,$min-max:min) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media screen and (#{$min-max}-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (#{$min-max}-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
+  }
+}
+
+@mixin heading($fs, $lh-S, $lh-M, $lh-L, $ls , $color: $heading-color-default) {
+  font-size: $fs;
+  color: $color;
+
+  font-family: $heading-font-family;
+  text-transform: $heading-text-transform;
+  letter-spacing: $ls;
+  font-weight: $heading-font-weight;
+  line-height: $lh-S;
+
+  @include mq(medium){
+    line-height: $lh-M;
+  }
+
+  @include mq(large){
+    line-height: $lh-L;
+  }
+}
+
+// hamburger menu button
+@mixin hamburger(){
+  cursor: pointer;
+  background-image: url(../../assets/shared/mobile/menu.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 1.75rem;
+  border: 0;
+  aspect-ratio: 1/1;
+  z-index: 10;
+  transition: background-image 250ms ease-in-out;
+
+  &.active{
+    background-image: url(../../assets/shared/mobile/close.svg);
+    margin-right: 1%;
+  }
+}
+
+
+@mixin backgroundTemplate(){
+  content: "";
+  position: absolute;
+  background-color: $color-secondary-300;
+  z-index: -1;
+  opacity: .15;
+  
+}

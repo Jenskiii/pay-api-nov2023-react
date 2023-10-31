@@ -1,0 +1,20 @@
+@use "../../sass/abstracts/" as *;
+.finance{
+    --grid-gap: $finance-grid-gap;
+}
+
+.column{
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    text-align: center;
+
+    h3{
+        padding-block: $finance-title-padding-block;
+     }
+
+    p{
+        max-width: $finance-paragraph-width;
+    }
+}
+

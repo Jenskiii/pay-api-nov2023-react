@@ -1,0 +1,44 @@
+// global color tokens
+$-clr-white: hsl(220 60% 99%);
+
+$-clr-dark-pink: hsl(337 48% 49%);
+$-clr-charm-pink: hsl(337 60% 64%);
+$-clr-disabled-pink: hsl(337, 42%, 69%);
+
+$-clr-background: hsl(207 44% 95%);
+$-clr-light-blue:  hsl(207 16% 50%);
+$-clr-mid-blue:  hsl(207 33% 32%);
+$-clr-dark-blue:  hsl(207 27% 15%);
+
+// hex colors for opacity
+$clr-mid-blue-hex:#36536B;
+$clr-white-hex: #FBFCFE;
+$clr-error: #F00;
+
+$default: (
+  "primary": (
+    "100": $-clr-white,
+    "200": $-clr-dark-pink,
+  ),
+  "secondary": (
+    "100": $-clr-background,
+    "200": $-clr-light-blue,
+    "300": $-clr-mid-blue,
+    "400": $-clr-dark-blue,
+    "500": $-clr-charm-pink,
+    "600": $-clr-disabled-pink,
+  ),
+);
+
+
+// contextual color tokens
+$color-primary-100: var(--primary-100);
+$color-primary-200: var(--primary-200);
+
+
+$color-secondary-100: var(--secondary-100);
+$color-secondary-200: var(--secondary-200);
+$color-secondary-300: var(--secondary-300);
+$color-secondary-400: var(--secondary-400);
+$color-secondary-500: var(--secondary-500);
+$color-secondary-600: var(--secondary-600);

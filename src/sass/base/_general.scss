@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+body {
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  font-size: $body-font-size;
+  color: $body-text-color;
+  background-color: $body-background-color;
+  line-height: $body-line-height;
+  max-width: 1440px;
+  height: 100vh;
+  margin-inline: auto;
+  overflow-x: hidden;
+}
+
+header{
+  padding-top: 1rem;
+}
+
+input{
+  outline: none;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: 275ms ease-in;
+}
+
+li{
+  list-style: none;
+}
+
+a:is(:hover, :focus) {
+  color: $link-color-hover;
+}

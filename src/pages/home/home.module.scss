@@ -1,0 +1,178 @@
+@use "../../sass/abstracts/" as *;
+// HEADER
+.header {
+  position: relative;
+  &::before {
+    @include backgroundTemplate;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 14.375rem;
+    border-radius: 0 0 50% 50%;
+
+    @include mq(medium) {
+      height: 17.6875rem;
+    }
+
+    @include mq(large) {
+      // circle size
+      border-radius: 48.75rem;
+      height: 48.75rem;
+      width: 48.75rem;
+      // circle position
+      left: 55%;
+      top: -140%;
+    }
+  }
+}
+
+// HERO
+.hero {
+  --grid-gap: 0;
+  margin-block: $hero-margin-block;
+
+  // image position small
+  @include mq(medium, max) {
+    img {
+      width: 280px;
+      height: 350px;
+      transform: translateY(-3rem);
+    }
+    .hero__information {
+      margin-top: -3rem;
+    }
+  }
+  // image position medium
+  @media (min-width: 45em) and (max-width: 65em) {
+    img {
+      width: 317px;
+      height: 460px;
+      transform: translateY(-3rem);
+    }
+    .hero__information {
+      margin-top: -3rem;
+    }
+  }
+
+  @include mq(large, max) {
+    &__wrapper {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  @include mq(large) {
+    img {
+      order: 1;
+      justify-self: end;
+    }
+    .hero__information {
+      margin-top: $hero-information-margin-top-desktop;
+    }
+  }
+}
+
+// PARTNERS
+.partners {
+  padding-block: $partners-margin-block;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  // base styling
+  &__information {
+    z-index: 3;
+    p {
+      opacity: $partners-text-opacity;
+      max-width: $partners-text-max-width;
+
+      // spacing
+      margin-block: $partners-text-spacing;
+
+      // mobile spacing only
+      @include mq(medium, max) {
+        margin-block: $partners-text-spacing-mobile;
+      }
+
+      @include mq(large, max) {
+        margin-inline: auto;
+      }
+    }
+
+    @include mq(large) {
+      text-align: left;
+    }
+  }
+
+   // background circle
+   &::before {
+    @include backgroundTemplate;
+    left: -10%;
+    width: 120%;
+    height: 13rem;
+    border-radius: 0 0 50% 50%;
+    top: 0;
+    z-index: 1;
+
+    @include mq(medium) {
+      left: 5%;
+      top: -40%;
+      aspect-ratio: 1/1;
+      height: 30rem;
+      width: 90%;
+    }
+
+    @include mq(large) {
+      top: -90%;
+      left: -15%;
+      height: 48.75rem;
+      width: 48.75rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+// IMPLEMENTATION
+.implementation {
+  display: grid;
+  gap: $implementation-grid-gap-mobile;
+  margin-block: $implementation-margin-block-mobile;
+
+  @include mq(medium) {
+    gap: $implementation-grid-gap-tablet;
+    margin-block: $implementation-margin-block-tablet;
+  }
+
+  @include mq(large) {
+    gap: $implementation-grid-gap-desktop;
+    margin-block: $implementation-margin-block-desktop;
+  }
+
+   // backgroun pattern
+   &__background-circle {
+    position: relative;
+    &::after {
+      display: none;
+      @include backgroundTemplate;
+      width: 48.75rem;
+      height: 48.75rem;
+      border-radius: 50%;
+      right: -24.33rem;
+      top: -35%;
+
+      @include mq(large){
+        display: block;
+      }
+    }
+  }
+}
+
+// FINANCE
+.finance {
+  &__form {
+    margin-block: $finance-margin-block;
+    @include mq(medium) {
+      margin-block: $finance-margin-block-tablet;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use "../../sass/abstracts/" as *;
+.container {
+  display: grid;
+  align-content: center;
+  text-align: center;
+
+  @include mq(medium) {
+    & {
+      justify-items: center;
+    }
+  }
+
+  @include mq(large) {
+    & {
+      justify-items: start;
+    }
+  }
+}
+.header {
+  max-width: $email-signup-h1-width-mobile;
+  text-align: $email-signup-h1-text-align-mobile;
+  padding-bottom: $email-signup-h1-padding-bottom;
+  margin-inline: auto;
+
+  @include mq(large) {
+    max-width: $email-signup-h1-width-desktop;
+    text-align: $email-signup-h1-text-align-desktop;
+    margin-inline: 0;
+  }
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $email-signup-form-gap;
+
+  @include mq(medium) {
+    & {
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      width: $email-signup-form-width;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.link {
+  font-weight: $font-weight-bold;
+}
+
+.paragraph {
+  @include mq(medium) {
+    display: none;
+  }
+}
+
+.error-msg {
+  position: absolute;
+  top: -1.5rem;
+  padding-left: $email-signup-error-msg-padding-left;
+  color: $clr-error;
+}
+
+.container[datatype="regular"] {
+  .paragraph {
+    display: none;
+  }
+
+  @include mq(large) {
+    & {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .error-msg{
+      top: -.5rem;
+    }
+  }
+}

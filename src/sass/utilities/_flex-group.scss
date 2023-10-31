@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.flex-group {
+  display: flex;
+}
+
+.flex-group.mx-auto {
+  justify-content: center;
+}

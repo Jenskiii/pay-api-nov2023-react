@@ -1,0 +1,52 @@
+@use "../../sass/abstracts/" as *;
+.container {
+  // doesnt work with tokens for some reason?
+  --grid-gap: 3rem;
+  .information {
+    text-align: center;
+  }
+}
+
+.image {
+  justify-self: center;
+  box-shadow: $even-columns-box-shadow;
+
+  &[datatype="implement"] {
+    max-width: $even-columns-implement-image-width;
+  }
+
+  &[datatype="ui"] {
+    max-width: $even-columns-ui-image-width;
+    @include mq(large) {
+      order: $even-columns-image-order-desktop;
+    }
+  }
+}
+
+.information {
+  text-align: center;
+}
+
+@include mq(medium) {
+  .information {
+    max-width: $even-columns-text-width-tablet;
+    margin-inline: auto;
+  }
+}
+
+@include mq(large) {
+  .image {
+    justify-self: start;
+  }
+
+  .information {
+    align-self: center;
+    max-width: $even-columns-text-width-desktop;
+    margin-inline: 0;
+
+    p,
+    h2 {
+      text-align: left;
+    }
+  }
+}

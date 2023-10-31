@@ -1,0 +1,247 @@
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+
+$active-theme: $default;
+$enable-media-query-dark-mode: false;
+
+// Contextual
+$color-text-default: $color-secondary-200;
+$color-background-default: $color-secondary-100;
+$color-text-interactive-default: rgba($clr-mid-blue-hex, .7);
+$color-text-interactive-hover: $color-secondary-300;
+
+// set to 0 to disable
+$letter-spacing-loose: 0;
+
+$border-radius-1: $size-6;
+$border-radius-2: $size-4;
+
+// body
+$body-font-family: $font-family-base;
+$body-font-size: $font-size-400;
+$body-line-height: 1.75rem;
+$body-font-weight: $font-weight-default;
+$body-text-color: $color-text-default;
+$body-background-color: $color-background-default;
+// links
+$link-color: $color-text-interactive-default;
+$link-color-hover: $color-text-interactive-hover;
+// headings
+$heading-font-family: $font-family-accent;
+$heading-color-default: $color-secondary-300;
+$heading-font-weight: $font-weight-default;
+$heading-letter-spacing: $letter-spacing-loose;
+$heading-line-height: 1.1;
+$heading-text-transform: none;
+
+$heading-1-font-size: $font-size-900;
+$heading-1-color: $heading-color-default;
+$heading-1-letter-spacing: -0.03463rem;
+$heading-1-line-height-small: 2.5rem;
+$heading-1-line-height-medium: 3.5rem;
+$heading-1-line-height-large: 4.5rem;
+
+$heading-2-font-size: $font-size-800;
+$heading-2-color: $heading-color-default;
+$heading-2-letter-spacing: -0.02694rem;
+$heading-2-line-height-small: 2.25rem;
+$heading-2-line-height-medium: 3.5rem;
+$heading-2-line-height-large: 3.5rem;
+
+$heading-3-font-size: $font-size-700;
+$heading-3-color: $heading-color-default;
+$heading-3-letter-spacing: -0.02306rem;
+$heading-3-line-height-small: 2.25rem;
+$heading-3-line-height-medium: 3.5rem;
+$heading-3-line-height-large: 3.5rem;
+
+$heading-4-font-size: $font-size-600;
+$heading-4-color: $heading-color-default;
+$heading-4-letter-spacing: -0.01538rem;
+$heading-4-line-height-small: 2rem;
+$heading-4-line-height-medium: 2.5rem;
+$heading-4-line-height-large: 2.5rem;
+
+$heading-5-font-size: $font-size-450;
+$heading-5-color: $heading-color-default;
+$heading-5-letter-spacing: -0.00863rem;
+$heading-5-line-height-small: 1.5625rem;
+$heading-5-line-height-medium: 1.5625rem;
+$heading-5-line-height-large: 1.5625rem;
+
+$heading-6-font-size: $font-size-500;
+$heading-6-color: $heading-color-default;
+$heading-6-letter-spacing: -0.01156rem;
+$heading-6-line-height-small: 2rem;
+$heading-6-line-height-medium: 2rem;
+$heading-6-line-height-large: 2rem;
+
+// layout
+$grid-gap: $size-6;
+$flex-group-gap: $size-4;
+$hero-padding-block: clamp(2rem, 10vh, 4.6rem);
+$section-padding-block: clamp(3rem, 10vh, 6rem);
+
+$container-min-margin-inline: $size-3;
+$container-max-width: 69.375rem;
+$container-max-width-narrow: 57.5rem;
+$container-max-width-wide: 75rem;
+
+// site header
+$site-header-background-color: $color-secondary-100;
+$site-header-color: $color-secondary-300;
+$site-header-padding: $size-12 0;
+$site-header-margin: 0;
+$site-header-jusitifcation-small-screens: center;
+$site-header-jusitifcation-large-screens: space-between;
+$site-header-alignment: center;
+
+
+//navigation
+$navigation-logo-color: $color-secondary-300;
+$navigation-color: $link-color;
+$navigation-color-hover: $link-color-hover;
+$navigation-font-size: $font-size-400;
+$navigation-gap: $size-9;
+$navigation-link-text-decoration: none;
+$navigation-font-family: $body-font-family;
+$navigation-font-weight: $font-weight-bold;
+
+// mobile nav
+$navigation-mobile-background-color: $color-secondary-400;
+$navigation-mobile-padding: 5.9375rem 1.6875rem;
+$navigation-mobile-gap: $size-8;
+$navigation-mobile-list-padding: 2.69rem 2rem;
+$navigation-mobile-border-top: solid 1px rgba($clr-white-hex, .15);
+$navigation-mobile-color: rgba($clr-white-hex, .7);
+$navigation-mobile-color-hover: rgba($clr-white-hex, 1);
+
+// site footer
+$footer-background-color: $color-secondary-400;
+$footer-padding: 2.5rem;
+$footer-padding-desktop: 1.94rem;
+
+$footer-logo-color: $color-primary-100;
+$footer-logo-color-hover: $color-secondary-500;
+$footer-link-color: rgba($clr-white-hex, .7);
+$footer-link-color-hover: $color-primary-100;
+$footer-link-font-family: $font-family-base;
+$footer-link-gap-mobile: 1.94rem;
+$footer-link-gap-desktop: 2.5rem;
+$footer-flow-gap: 2.5rem;
+$footer-flow-gap-desktop: 4rem;
+$footer-link-text-decoration: none;
+
+// buttons
+$button-font-family: $body-font-family;
+$button-font-size: $font-size-400;
+$button-font-weight: $font-weight-bold;
+$button-text-transform: none;
+$button-padding: 0.9em 1.55em;
+$button-border: 0;
+$button-border-radius: $border-radius-1;
+$button-letter-spacing: -0.00719rem;
+
+$button-primary-color: $color-primary-100;
+$button-primary-background: $color-primary-200;
+$button-primary-color-hover: $color-primary-100;
+$button-primary-background-hover: $color-secondary-500;
+$button-primary-disabled-background: $color-secondary-600;
+
+$button-secondary-dark-color: $color-primary-100;
+$button-secondary-dark-background: transparent;
+$button-secondary-dark-border: solid 1px $color-primary-100;
+$button-secondary-dark-color-hover: $color-secondary-400;
+$button-secondary-dark-background-hover: $color-primary-100;
+
+$button-secondary-dark-disabled-color: $color-primary-100;
+$button-secondary-dark-disabled-border: solid 1px rgba($clr-white-hex, .7);
+
+$button-secondary-light-color: $color-secondary-300;
+$button-secondary-light-background: transparent;
+$button-secondary-light-border: solid 1px $color-secondary-300;
+$button-secondary-light-color-hover: $color-primary-100;
+$button-secondary-light-background-hover: $color-secondary-300;
+
+
+// forms
+$form-label-color: $body-text-color;
+$form-label-font-family: $body-font-family;
+$form-label-font-weight: $font-weight-default;
+$form-label-font-size: $body-font-size;
+
+$form-input-color: rgba($color-secondary-300,.5);
+$form-input-color-focus: $color-secondary-300;
+$form-input-font-family: $body-font-family;
+$form-input-font-weight: $font-weight-default;
+$form-input-font-size: $body-font-size;
+$form-input-background-color: $color-primary-100;
+$form-input-border-bottom-default: 1px solid rgba($clr-mid-blue-hex, .5);
+$form-input-border-bottom-focus: 1px solid $color-secondary-300;
+$form-input-padding: $size-2 $size-3;
+$form-input-textarea-padding: $size-8;
+$form-input-outline: none;
+
+$form-placeholder-color: rgba($clr-mid-blue-hex, .5);
+$form-placeholder-font-family: $form-input-font-family;
+$form-placeholder-font-weight: $form-input-font-weight;
+$form-placeholder-font-size: $body-font-size;
+
+$form-group-spacing: 0.5rem;
+
+
+// COMPONENTS //
+// email-signup
+$email-signup-h1-padding-bottom: 1.5rem;
+$email-signup-h1-width-mobile: 23ch;
+$email-signup-h1-width-desktop: 15ch;
+$email-signup-h1-text-align-mobile: center;
+$email-signup-h1-text-align-desktop: left;
+$email-signup-form-gap: 1rem 0;
+$email-signup-form-width: 27.8125rem;
+$email-signup-error-msg-padding-left: 1.5rem;
+// partners
+$partners-logo-fill-dark: $color-primary-100;
+$partners-logo-fill-light: $color-secondary-300;
+$partners-grid-gap-mobile: 2.6rem 3.5rem;
+$partners-grid-gap-tablet: 3.3rem 3.88rem;
+$partners-image-order: 1;
+// finance
+$finance-grid-gap: 3rem 1rem;
+$finance-title-padding-block: 2rem 1rem;
+$finance-paragraph-width: 40ch;
+// even-columns
+$even-columns-grid-gap: 3rem ;
+$even-columns-box-shadow: 25px 25px 80px 0px rgba(54, 83, 107, 0.3);
+$even-columns-implement-image-width: 27.8125rem;
+$even-columns-ui-image-width: 35rem;
+$even-columns-image-order-desktop: 1;
+$even-columns-text-width-tablet: 63ch;
+$even-columns-text-width-desktop: 43ch;
+
+
+
+// PAGES //
+// HOME
+
+// hero
+$hero-margin-block:3rem 5rem;
+$hero-information-margin-top-desktop: 8rem;
+// partners
+$partners-margin-block: 5.5rem;
+$partners-text-opacity: .7rem;
+$partners-text-max-width: 50ch;
+$partners-text-spacing-mobile: 1rem 3.75rem;
+$partners-text-spacing: 1.5rem 2rem;
+// implementation
+$implementation-grid-gap-mobile: 5rem;
+$implementation-margin-block-mobile: 5rem;
+$implementation-grid-gap-tablet: 6.25rem;
+$implementation-margin-block-tablet: 6.25rem;
+$implementation-grid-gap-desktop: 9.37rem;
+$implementation-margin-block-desktop: 9.37rem;
+// finance
+$finance-margin-block: 5rem;
+$finance-margin-block-tablet: 6rem;

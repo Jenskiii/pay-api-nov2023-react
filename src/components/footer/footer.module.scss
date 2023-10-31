@@ -1,0 +1,113 @@
+@use "../../sass/abstracts/" as *;
+
+.footer {
+  background-color: $footer-background-color;
+  padding-block: $footer-padding;
+
+  .container {
+    flex-direction: column;
+    gap: $footer-flow-gap;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $footer-flow-gap;
+  }
+  .nav {
+    flex-direction: column;
+    gap: $footer-link-gap-mobile;
+  }
+
+  // mq's
+  @include mq(medium, max) {
+    & {
+      display: grid;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  @include mq(medium) {
+    & {
+      padding: $footer-padding-desktop;
+    }
+
+    .container,
+    .nav-wrapper,
+    .nav {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .nav-wrapper {
+      gap: $footer-flow-gap-desktop;
+    }
+
+    .nav {
+      gap: $footer-link-gap-desktop;
+    }
+
+    .container {
+      justify-content: space-between;
+    }
+  }
+
+  // company logo + link colors
+  .company-logo {
+    fill: $footer-logo-color;
+  }
+
+  .socials {
+    gap: 1.5rem;
+    a {
+      fill: white;
+      &:is(:hover, :focus) {
+        fill: $footer-logo-color-hover;
+      }
+    }
+  }
+
+  a {
+    cursor: pointer;
+    color: $footer-link-color;
+    font-weight: $font-weight-bold;
+
+    &:is(:hover, :focus) {
+      color: $footer-link-color-hover;
+    }
+  }
+
+  // puts links above background circle
+  .socials-wrapper,
+  .nav-wrapper {
+    z-index: 2;
+  }
+
+  // background circle
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    @include backgroundTemplate;
+    width: 120%;
+    height: 48%;
+    bottom: 0;
+    left: -10%;
+    z-index: 0;
+    border-radius: 50% 50% 0 0;
+
+    @include mq(medium) {
+      right: 0;
+      left: auto;
+      width: 43%;
+      height: 200%;
+      border-radius: 100% 0 0 0;
+    }
+
+    @include mq(large) {
+        width: 26%;
+      }
+  }
+}

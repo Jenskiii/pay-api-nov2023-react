@@ -1,0 +1,88 @@
+@use "../../sass/abstracts/" as *;
+.wrapper{
+  display: flex;
+}
+
+.nav-link{
+  font-weight: $font-weight-bold;
+}
+
+.logo{
+  z-index: 15;
+  fill: $navigation-logo-color;
+}
+// mobile menu
+@include mq(medium, max) {
+  .wrapper {
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    @include hamburger;
+    z-index: 100;
+  }
+
+  .nav {
+    & {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background-color: $navigation-mobile-background-color;
+      width: 80%;
+      right: -100%;
+      top: 0;
+      height: 100vh;
+      text-align: center;
+      padding: $navigation-mobile-padding;
+      transition: 250ms ease-in;
+      z-index: 10;
+    }
+
+    &.active{
+      right: 0;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      border-top: $navigation-mobile-border-top;
+      gap: $navigation-mobile-gap;
+      padding-block: $navigation-mobile-list-padding;
+    }
+    &-link {
+      color: $navigation-mobile-color;
+      font-size: 1.25rem;
+
+      &:is(:hover, :focus) {
+        color: $navigation-mobile-color-hover;
+      }
+    }
+    .button {
+      width: 100%;
+    }
+  }
+}
+
+@include mq(medium){
+  .wrapper{
+    gap: 4rem;
+  }
+
+  .nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .list{
+    display: flex;
+    gap: $navigation-gap;
+  }
+
+  .hamburger{
+    display: none;
+  }
+}
