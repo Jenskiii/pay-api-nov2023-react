@@ -4,9 +4,11 @@
   align-content: center;
   text-align: center;
 
+  margin-block: $email-signup-margin-block;
   @include mq(medium) {
     & {
       justify-items: center;
+      margin-block: $email-signup-margin-block-tablet;
     }
   }
 

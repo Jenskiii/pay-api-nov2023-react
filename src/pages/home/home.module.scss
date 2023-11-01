@@ -167,12 +167,3 @@
   }
 }
 
-// FINANCE
-.finance {
-  &__form {
-    margin-block: $finance-margin-block;
-    @include mq(medium) {
-      margin-block: $finance-margin-block-tablet;
-    }
-  }
-}

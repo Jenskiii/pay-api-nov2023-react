@@ -1,0 +1,20 @@
+@use "../../sass/abstracts/" as *;
+// header
+.header {
+    position: relative;
+    @include backgroundHeader;
+}
+// price-plan
+.price-plan {
+  h1 {
+    margin-block: 3rem;
+    @include mq(medium) {
+      margin-block: 5rem 4.5rem;
+    }
+    @include mq(large) {
+      text-align: left;
+    }
+  }
+}
+
+

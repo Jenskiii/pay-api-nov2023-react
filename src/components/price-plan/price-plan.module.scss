@@ -1,0 +1,53 @@
+@use "../../sass/abstracts/" as *;
+.container {
+  text-align: center;
+}
+
+.card{
+    p{
+        margin-block: 1rem .5rem;
+    }
+}
+
+
+.list {
+  display: grid;
+  justify-content: center;
+  gap: 0.5rem;
+  border-block: 1px solid rgba($clr-mid-blue-hex, 0.25);
+  padding-block: 1.5rem;
+  margin-block: 1.5rem;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: $color-secondary-300;
+    font-size: 1rem;
+
+    &[datatype="disabled"] {
+      opacity: 0.7;
+
+      svg {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+@include mq(large) {
+  .container {
+    text-align: left;
+  }
+
+  .list {
+    justify-content: start;
+  }
+
+  .card {
+    display: grid;
+    a {
+      justify-self: start;
+    }
+  }
+}
