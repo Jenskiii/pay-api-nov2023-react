@@ -7,9 +7,25 @@ body {
   background-color: $body-background-color;
   line-height: $body-line-height;
   max-width: 1440px;
-  height: 100vh;
   margin-inline: auto;
   overflow-x: hidden;
+}
+
+#root{
+  display: grid;
+  height: 100vh;
+}
+
+header{
+  align-self: start;
+}
+
+main{
+  align-self: center;
+}
+
+footer{
+  align-self: end;
 }
 
 header{
