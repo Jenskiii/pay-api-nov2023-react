@@ -142,7 +142,7 @@ export function Form() {
             className={`${messageErrors.length > 0 && "error"} `}
           />
           {messageErrors.length > 0 && (
-            <div className="error-message">{messageErrors.join(", ")}</div>
+            <div className="error-message ">{messageErrors.join(", ")}</div>
           )}
         </div>
 
