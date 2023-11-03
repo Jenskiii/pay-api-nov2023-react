@@ -39,6 +39,12 @@
 
   input:not(.button){
     background-color: $email-signup-background-color;
+
+    .error{
+      ::placeholder{
+        color: $form-error-color;
+      }
+    }
   }
 
   @include mq(medium,max){
