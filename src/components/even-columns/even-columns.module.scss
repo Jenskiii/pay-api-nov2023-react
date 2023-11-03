@@ -17,6 +17,7 @@
 
   &[datatype="ui"] {
     max-width: $even-columns-ui-image-width;
+    box-shadow: none;
     @include mq(large) {
       order: $even-columns-image-order-desktop;
     }
