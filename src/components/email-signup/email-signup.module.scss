@@ -37,6 +37,17 @@
   flex-direction: column;
   gap: $email-signup-form-gap;
 
+  input:not(.button){
+    background-color: $email-signup-background-color;
+  }
+
+  @include mq(medium,max){
+    button,input{
+      max-width: $email-signup-input-width-mobile;
+      width: 100%;
+      margin-inline: auto;
+    }
+  }
   @include mq(medium) {
     & {
       flex-direction: row;

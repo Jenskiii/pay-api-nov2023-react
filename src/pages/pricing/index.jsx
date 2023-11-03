@@ -13,14 +13,16 @@ export function Pricing() {
       </header>
 
       <main>
-        {/* HERO */}
+        
+        {/* price-plan*/}
         <section className={styles["price-plan"]}>
-        <div className="container">
-          <h1 className="heading-2 | text-center">Pricing</h1>
-          <PricePlan/>
-        </div>
+          <div className="container">
+            <h1 className="heading-2 | text-center">Pricing</h1>
+            <PricePlan />
+          </div>
         </section>
 
+        {/* sign-up */}
         <section className={styles["sign-up"]}>
           <div className="container">
             <EmailSignUp

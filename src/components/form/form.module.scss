@@ -1,0 +1,21 @@
+@use "../../sass/abstracts/" as *;
+.contact-form {
+  max-width: $form-max-width;
+
+  @include mq(large,max){
+    margin-inline: auto;
+  }
+  
+  .form-group {
+    position: relative;
+    display: grid;
+  }
+
+  .checkbox{
+    margin-block: $form-checkmark-margin-block;
+  }  
+}
+
+input:not(.button) {
+  background-color: $form-input-background-color;
+}

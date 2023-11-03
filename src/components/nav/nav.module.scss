@@ -29,10 +29,11 @@
       flex-direction: column;
       position: absolute;
       background-color: $navigation-mobile-background-color;
-      width: 80%;
+      width: $navigation-mobile-width;
+      height: $navigation-mobile-height;
       right: -100%;
       top: 0;
-      height: 100vh;
+
       text-align: center;
       padding: $navigation-mobile-padding;
       transition: 250ms ease-in;

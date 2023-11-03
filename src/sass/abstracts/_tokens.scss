@@ -86,7 +86,6 @@ $section-padding-block: clamp(3rem, 10vh, 6rem);
 
 $container-min-margin-inline: $size-3;
 $container-max-width: 69.375rem;
-$container-max-width-narrow: 57.5rem;
 $container-max-width-wide: 75rem;
 
 // site header
@@ -97,7 +96,6 @@ $site-header-margin: 0;
 $site-header-jusitifcation-small-screens: center;
 $site-header-jusitifcation-large-screens: space-between;
 $site-header-alignment: center;
-
 
 //navigation
 $navigation-logo-color: $color-secondary-300;
@@ -111,6 +109,8 @@ $navigation-font-weight: $font-weight-bold;
 
 // mobile nav
 $navigation-mobile-background-color: $color-secondary-400;
+$navigation-mobile-width: 80%;
+$navigation-mobile-height: 100vh;
 $navigation-mobile-padding: 5.9375rem 1.6875rem;
 $navigation-mobile-gap: $size-8;
 $navigation-mobile-list-padding: 2.69rem 2rem;
@@ -172,15 +172,15 @@ $form-label-font-family: $body-font-family;
 $form-label-font-weight: $font-weight-default;
 $form-label-font-size: $body-font-size;
 
-$form-input-color: rgba($color-secondary-300,.5);
+$form-input-color: $color-secondary-300;
 $form-input-color-focus: $color-secondary-300;
 $form-input-font-family: $body-font-family;
 $form-input-font-weight: $font-weight-default;
 $form-input-font-size: $body-font-size;
-$form-input-background-color: $color-primary-100;
+$form-input-background-color: $color-secondary-100;
 $form-input-border-bottom-default: 1px solid rgba($clr-mid-blue-hex, .5);
 $form-input-border-bottom-focus: 1px solid $color-secondary-300;
-$form-input-padding: $size-2 $size-3;
+$form-input-padding: $size-3 $size-3;
 $form-input-textarea-padding: $size-8;
 $form-input-outline: none;
 
@@ -188,13 +188,21 @@ $form-placeholder-color: rgba($clr-mid-blue-hex, .5);
 $form-placeholder-font-family: $form-input-font-family;
 $form-placeholder-font-weight: $form-input-font-weight;
 $form-placeholder-font-size: $body-font-size;
-
 $form-group-spacing: 0.5rem;
+
+$form-error-border: solid 1px $clr-error;
+$form-error-color: $clr-error;
+$form-error-font-size: 0.6875rem;
+$form-error-letter-spacing: -0.00531rem;
+$form-error-opacity: .5;
+$form-error-padding-left: .75rem;
+
 
 
 // COMPONENTS //
 // email-signup
 // finance
+$email-signup-background-color: $color-primary-100;
 $email-signup-margin-block: 5rem;
 $email-signup-margin-block-tablet: 6rem;
 $email-signup-h1-padding-bottom: 1.5rem;
@@ -204,6 +212,7 @@ $email-signup-h1-text-align-mobile: center;
 $email-signup-h1-text-align-desktop: left;
 $email-signup-form-gap: 1rem 0;
 $email-signup-form-width: 27.8125rem;
+$email-signup-input-width-mobile: 25rem;
 $email-signup-error-msg-padding-left: 1.5rem;
 // partners
 $partners-logo-fill-dark: $color-primary-100;
@@ -223,12 +232,38 @@ $even-columns-ui-image-width: 35rem;
 $even-columns-image-order-desktop: 1;
 $even-columns-text-width-tablet: 63ch;
 $even-columns-text-width-desktop: 43ch;
+// price-plan
+$price-plan-card-text-margin: 1rem .5rem; 
+$price-plan-list-gap: .5rem; 
+$price-plan-list-border: 1px solid rgba($clr-mid-blue-hex, 0.25); 
+$price-plan-list-padding: 1.5rem; 
+$price-plan-list-margin: 1.5rem; 
+$price-plan-list-item-gap: 1.5rem; 
+$price-plan-list-item-color: $color-secondary-300; 
+$price-plan-list-item-font-size: 1rem; 
+$price-plan-list-item-disabled-opacity: 0.7; 
+// two-rows
+$two-rows-gap-mobile: 1rem;
+$two-rows-gap-tablet: 3rem;
+$two-rows-gap-desktop: 9rem;
+$two-rows-text-width-mobile: 50ch;
+$two-rows-text-width-desktop: 68ch;
+// checkmark
+$checkmark-height: 1.5em;
+$checkmark-width: 1.5em;
+$checkmark-gap: 1.6rem;
+$checkmark-font-size: 1.2em;
+$checkmark-color: $color-primary-100;
+$checkmark-label-color:$color-secondary-300;
+// form
+$form-max-width: 27.8125rem;
+$form-checkmark-margin-block: 1.5rem;
+
 
 
 
 // PAGES //
-// HOME
-
+// HOME //
 // hero
 $hero-margin-block:3rem 5rem;
 $hero-information-margin-top-desktop: 8rem;
@@ -245,4 +280,35 @@ $implementation-grid-gap-tablet: 6.25rem;
 $implementation-margin-block-tablet: 6.25rem;
 $implementation-grid-gap-desktop: 9.37rem;
 $implementation-margin-block-desktop: 9.37rem;
+
+// PRICING //
+$price-plan-margin-block-mobile:3rem;
+$price-plan-margin-block-desktop:5rem 4.5rem;
+
+// ABOUT //
+// vision
+$about-vision-margin-top-mobile: 3rem;
+$about-vision-margin-top-tablet: 5rem;
+$about-vision-h1-width: 23ch;
+$about-vision-two-rows-margin-mobile: 2.5rem 4.75rem;
+$about-vision-two-rows-margin-tablet: 3.37rem 5.75rem;
+$about-vision-two-rows-margin-desktop: 3.19rem 6.25rem;
+// bio
+$about-bio-column-gap: 2rem;
+$about-bio-column-padding-block: 1rem;
+$about-bio-column-margin-block: 3rem;
+$about-bio-border-block: 1px solid rgba($clr-mid-blue-hex, 0.25);
+
+// CONTACT //
+// hero
+$contact-hero-h1-width-mobile: 20ch;
+$contact-hero-h1-width-desktop: 25ch;
+$contact-hero-h1-margin-block-mobile: 3rem 2.5rem;
+$contact-hero-h1-margin-block-tablet: 5.44rem 2.69rem;
+$contact-hero-h1-margin-block-desktop: 5rem 3.3rem;
+// hero partners
+$contact-hero-partners-h4-width-mobile: 25ch;
+$contact-hero-partners-h4-width-desktop: 30ch;
+$contact-hero-partners-h4-margin-block-mobile: 0 2.5rem;
+$contact-hero-partners-h4-margin-block-desktop: 2.5rem;
 

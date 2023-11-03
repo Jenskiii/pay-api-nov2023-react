@@ -1,0 +1,55 @@
+@use "../../sass/abstracts/" as *;
+// header
+.header {
+  position: relative;
+  @include backgroundHeader;
+}
+
+// hero
+.hero {
+   h1{
+    margin-block: $contact-hero-h1-margin-block-mobile;
+    margin-inline: auto;
+    text-align: center;
+    max-width: $contact-hero-h1-width-mobile;
+    
+   }
+
+  &__partners {
+    text-align: center;
+
+    h4 {
+      max-width: $contact-hero-partners-h4-width-mobile;
+      margin-inline: auto;
+      margin-block: $contact-hero-partners-h4-margin-block-mobile;
+    }
+  }
+  @include mq(medium) {
+    &{
+        h1{
+            margin-block: $contact-hero-h1-margin-block-tablet;
+        }
+    }
+  }
+
+  @include mq(large) {
+    &{
+        h1{
+            max-width: $contact-hero-h1-width-desktop;
+            text-align: left;
+            margin-block: $contact-hero-h1-margin-block-desktop;
+            margin-inline: 0;
+        }
+    }
+
+    &__partners {
+      align-self: center;
+      h4 {
+        margin-inline: 0;
+        text-align: left;
+        max-width: $contact-hero-partners-h4-width-desktop;
+        margin-block: $contact-hero-partners-h4-margin-block-desktop;
+      }
+    }
+  }
+}

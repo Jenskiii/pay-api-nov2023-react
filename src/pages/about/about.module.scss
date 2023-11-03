@@ -1,0 +1,83 @@
+@use "../../sass/abstracts/" as *;
+
+// header
+.header {
+  position: relative;
+  @include backgroundHeader;
+}
+
+// vision
+.vision{
+  h1 {
+    max-width: $about-vision-h1-width;
+    margin-inline: auto;
+
+    margin-top: $about-vision-margin-top-mobile;
+  
+    @include mq(medium){
+      margin-top: $about-vision-margin-top-tablet;
+    }
+  }
+
+  &__two-rows{
+    margin-block: $about-vision-two-rows-margin-mobile;
+  }
+
+  @include mq(medium){
+    &__two-rows{
+      margin-block: $about-vision-two-rows-margin-tablet;
+    }
+  }
+
+  @include mq(large) {
+    &__two-rows{
+      margin-block: $about-vision-two-rows-margin-desktop;
+    }
+    h1 {
+        margin-inline: 0;
+        text-align: left;
+    }
+  }
+}
+// hero
+.hero{
+ img{
+  width: 100%;
+  object-fit: cover;
+ }
+
+}
+// Bio
+.bio{
+  &__columns{
+    display: flex;
+    flex-direction: column;
+    gap: $about-bio-column-gap;
+    text-align: center;
+    padding-block: $about-bio-column-padding-block;
+    margin-block: $about-bio-column-margin-block;
+    border-block: $about-bio-border-block;
+
+    p{
+      opacity: .7;
+    }
+  }
+
+  @include mq(medium){
+    &__columns{
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      border: 0;
+    }
+
+    &__col{
+      border-block: $about-bio-border-block;
+      width: 100%;
+      padding-block: 1rem;
+    }
+  }
+
+
+}
+

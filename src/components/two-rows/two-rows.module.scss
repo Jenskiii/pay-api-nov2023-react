@@ -1,0 +1,41 @@
+@use "../../sass/abstracts/" as *;
+.container{
+    display: grid;
+    gap: 3rem;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    gap: $two-rows-gap-mobile;
+    text-align: center;
+    margin-inline: auto;
+    h2{
+        text-wrap: nowrap;
+    }
+
+    p{
+        max-width: $two-rows-text-width-mobile;
+    }
+
+    @include mq(medium){
+        &{
+            flex-direction: row;
+            gap: $two-rows-gap-tablet;
+            text-align: left;
+        }
+        h2{
+            width: 13.9375rem;
+        }
+
+    }
+    @include mq(large){
+        &{
+            gap: $two-rows-gap-desktop;
+            margin-inline: 0;
+        }
+        p{
+            max-width: $two-rows-text-width-desktop; 
+        }
+    }
+}

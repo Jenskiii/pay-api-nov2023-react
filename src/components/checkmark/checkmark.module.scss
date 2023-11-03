@@ -1,0 +1,43 @@
+@use "../../sass/abstracts/" as *;
+.checkbox-wrapper{
+    label{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: $checkmark-label-color;
+        line-height: 1.5625rem;
+    }
+
+    input[type="checkbox"] {
+      /* removing default appearance */
+      -webkit-appearance: none;
+      appearance: none;
+      /* creating a custom design */
+      width: $checkmark-width;
+      height: $checkmark-height;
+      margin-right: $checkmark-gap;
+      background-color: rgba($clr-mid-blue-hex, 0.25);
+      outline: none;
+      cursor: pointer;
+      border: 0;
+      &:is(:hover,:active){
+        border: 0;
+      }
+    }
+
+    input[type="checkbox"]:checked {
+      background-color: $color-primary-200;
+      position: relative;
+    }
+
+    input:checked::before {
+      content: "\2713";
+      font-size: $checkmark-font-size;
+      color: $checkmark-color;
+      position: absolute;
+      left: .34em;
+      top: 0;
+    }
+}
+
+

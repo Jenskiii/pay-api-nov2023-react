@@ -67,7 +67,7 @@ export function PricePlan() {
           return (
             <div className={styles.card} key={plan.key}>
               <div>
-                <h2 className="heading-4 | clr-secondary-500">{plan.title}</h2>
+                <h2 className="heading-4 | clr-primary-200">{plan.title}</h2>
                 <p>{plan.text}</p>
                 <p className="heading-2">{plan.price}</p>
               </div>

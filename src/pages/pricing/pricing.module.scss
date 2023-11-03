@@ -7,9 +7,9 @@
 // price-plan
 .price-plan {
   h1 {
-    margin-block: 3rem;
+    margin-block: $price-plan-margin-block-mobile;
     @include mq(medium) {
-      margin-block: 5rem 4.5rem;
+      margin-block: $price-plan-margin-block-desktop;
     }
     @include mq(large) {
       text-align: left;
